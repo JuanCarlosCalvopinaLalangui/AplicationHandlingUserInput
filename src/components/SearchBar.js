@@ -19,15 +19,16 @@ class SearchBar extends React.Component {
         );
     }
 
+    onFormSubmit = event => {
+        event.preventDefault();
+        this.props.runOnSubmit(this.state.term);
+        console.log(this.state.term);
+    };
     // onFormSubmit (event) {
     //     event.preventDefault();
     //     console.log(this.state.term);
     // };
 
-    onFormSubmit = event => {
-        event.preventDefault();
-        console.log(this.state.term);
-    };
 }
 
 export default SearchBar;
